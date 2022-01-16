@@ -1,0 +1,14 @@
+<div *ngIf="productos.length>0">
+    <div *ngFor="let producto of productos">
+        
+        <p>{{producto.title | uppercase }}</p>
+        <p>{{producto.title}}</p>
+        <p>{{producto.price | currency}}</p>
+        <button routerLink="/producto/{{producto.id}}">Ver Detalle</button>
+        
+    </div>
+</div>
+
+<div *ngIf="productos.length<=0">
+    No hay resultados
+</div>
